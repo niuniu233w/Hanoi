@@ -18,9 +18,9 @@ void Hanoi(int n, char pos1, char pos2, char pos3)
 	}
 	else
 	{
-		Hanoi(n - 1, pos1, pos3, pos2);
-		move(pos1, pos3);
-		Hanoi(n - 1, pos2, pos1, pos3);
+		Hanoi(n - 1, pos1, pos3, pos2); //先将pos1上n-1个盘子以pos3为中转移动到pos2的位置
+		move(pos1, pos3);//将最大的盘子移到pos3
+		Hanoi(n - 1, pos2, pos1, pos3);//再将pos2上n-1个盘子以pos1为中转移动到pos3的位置
 	}
 
 }
